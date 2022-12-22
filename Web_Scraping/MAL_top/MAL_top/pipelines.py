@@ -21,6 +21,7 @@ class MalTopPipeline():
         self.curr.execute("""CREATE TABLE MAL_tb(Title TEXT,Score TEXT,Rank TEXT)""") #creating the table
     def process_item(self, item, spider):
         self.store_db(item) #call the store_db function
+        return item
     def store_db(self,item):
         self.curr.execute("""INSERT INTO MAL_tb VALUES(?,?,?)""",(
             item['title'][0],
