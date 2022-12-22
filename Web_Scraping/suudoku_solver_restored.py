@@ -1,3 +1,4 @@
+#this file previously existed on another repo, I am now uploading it to my new repo.
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 driver=webdriver.Chrome()
