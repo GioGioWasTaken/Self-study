@@ -26,14 +26,12 @@ def sudoku_scraper():
     sudoku_squares.clear()
     for j in range(0, 81, 1):
         if j != 0:
-            # sudoku_square = sudoku.find_element(By.ID, f'right{j}')
             try:
                 sudoku_square_visible = sudoku.find_element(By.ID, f'right{j}').find_element(By.CLASS_NAME, 'sedy').text
             except:
                 sudoku_square_visible = sudoku.find_element(By.ID, f'right{j}').find_element(By.CLASS_NAME, 'show').text
             sudoku_squares.append(str(sudoku_square_visible))
         else:
-            # sudoku_square = sudoku.find_element(By.ID, f'right')
             try:
                 sudoku_square_visible = sudoku.find_element(By.ID, f'right').find_element(By.CLASS_NAME, 'sedy').text
             except:
